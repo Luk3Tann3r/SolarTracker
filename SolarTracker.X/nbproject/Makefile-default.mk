@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c pwm.c timer.c gpio.c oper.c sensor.c uart.c adc.c sun.c gps.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c pwm.c timer.c gpio.c oper.c sensor.c uart.c adc.c gps.c sun.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/gpio.o ${OBJECTDIR}/oper.o ${OBJECTDIR}/sensor.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/sun.o ${OBJECTDIR}/gps.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/pwm.o.d ${OBJECTDIR}/timer.o.d ${OBJECTDIR}/gpio.o.d ${OBJECTDIR}/oper.o.d ${OBJECTDIR}/sensor.o.d ${OBJECTDIR}/uart.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/sun.o.d ${OBJECTDIR}/gps.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/gpio.o ${OBJECTDIR}/oper.o ${OBJECTDIR}/sensor.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/gps.o ${OBJECTDIR}/sun.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/pwm.o.d ${OBJECTDIR}/timer.o.d ${OBJECTDIR}/gpio.o.d ${OBJECTDIR}/oper.o.d ${OBJECTDIR}/sensor.o.d ${OBJECTDIR}/uart.o.d ${OBJECTDIR}/adc.o.d ${OBJECTDIR}/gps.o.d ${OBJECTDIR}/sun.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/gpio.o ${OBJECTDIR}/oper.o ${OBJECTDIR}/sensor.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/sun.o ${OBJECTDIR}/gps.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/pwm.o ${OBJECTDIR}/timer.o ${OBJECTDIR}/gpio.o ${OBJECTDIR}/oper.o ${OBJECTDIR}/sensor.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/adc.o ${OBJECTDIR}/gps.o ${OBJECTDIR}/sun.o
 
 # Source Files
-SOURCEFILES=main.c pwm.c timer.c gpio.c oper.c sensor.c uart.c adc.c sun.c gps.c
+SOURCEFILES=main.c pwm.c timer.c gpio.c oper.c sensor.c uart.c adc.c gps.c sun.c
 
 
 
@@ -151,19 +151,19 @@ ${OBJECTDIR}/adc.o: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  adc.c  -o ${OBJECTDIR}/adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/adc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	@${FIXDEPS} "${OBJECTDIR}/adc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/sun.o: sun.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/sun.o.d 
-	@${RM} ${OBJECTDIR}/sun.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  sun.c  -o ${OBJECTDIR}/sun.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/sun.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	@${FIXDEPS} "${OBJECTDIR}/sun.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/gps.o: gps.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/gps.o.d 
 	@${RM} ${OBJECTDIR}/gps.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  gps.c  -o ${OBJECTDIR}/gps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/gps.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	@${FIXDEPS} "${OBJECTDIR}/gps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/sun.o: sun.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/sun.o.d 
+	@${RM} ${OBJECTDIR}/sun.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  sun.c  -o ${OBJECTDIR}/sun.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/sun.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${FIXDEPS} "${OBJECTDIR}/sun.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
@@ -222,19 +222,19 @@ ${OBJECTDIR}/adc.o: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  adc.c  -o ${OBJECTDIR}/adc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/adc.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	@${FIXDEPS} "${OBJECTDIR}/adc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/sun.o: sun.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/sun.o.d 
-	@${RM} ${OBJECTDIR}/sun.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  sun.c  -o ${OBJECTDIR}/sun.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/sun.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	@${FIXDEPS} "${OBJECTDIR}/sun.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/gps.o: gps.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/gps.o.d 
 	@${RM} ${OBJECTDIR}/gps.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  gps.c  -o ${OBJECTDIR}/gps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/gps.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	@${FIXDEPS} "${OBJECTDIR}/gps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/sun.o: sun.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/sun.o.d 
+	@${RM} ${OBJECTDIR}/sun.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  sun.c  -o ${OBJECTDIR}/sun.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/sun.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${FIXDEPS} "${OBJECTDIR}/sun.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
