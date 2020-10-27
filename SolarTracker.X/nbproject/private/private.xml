@@ -4,13 +4,25 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/system.h</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/telman.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/telman.h</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/spa.c</file>
             <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/sensor.h</file>
-            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/gps.h</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/telemetry.h</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/spa.h</file>
             <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/main.c</file>
             <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/sensor.c</file>
-            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/adc.c</file>
-            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/gps.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/uart.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/uart.h</file>
             <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/sun.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/sun.h</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/gps.h</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/oper.h</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/timer.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/oper.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/gps.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/adc.c</file>
+            <file>file:/C:/Users/matthan.delport/MPLABXProjects/SolarTracker.X/pwm.c</file>
         </group>
     </open-files>
 </project-private>

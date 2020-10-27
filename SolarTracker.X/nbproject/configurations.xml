@@ -28,10 +28,17 @@
       <itemPath>uart.c</itemPath>
       <itemPath>uart.h</itemPath>
       <itemPath>adc.c</itemPath>
+      <itemPath>sun.c</itemPath>
       <itemPath>gps.c</itemPath>
       <itemPath>gps.h</itemPath>
-      <itemPath>sun.c</itemPath>
+      <itemPath>queue.h</itemPath>
+      <itemPath>queue.c</itemPath>
+      <itemPath>telman.h</itemPath>
+      <itemPath>telman.c</itemPath>
+      <itemPath>telemetry.h</itemPath>
       <itemPath>sun.h</itemPath>
+      <itemPath>spa.c</itemPath>
+      <itemPath>spa.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -238,6 +245,7 @@
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

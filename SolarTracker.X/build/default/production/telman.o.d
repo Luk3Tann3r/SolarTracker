@@ -1,5 +1,5 @@
-build/default/production/gpio.o:  \
-gpio.c  \
+build/default/production/telman.o:  \
+telman.c  \
 system.h  \
 adc.h  \
 gpio.h  \

@@ -12,6 +12,13 @@
 extern "C" {
 #endif
 
+typedef struct _stOPER
+{	           
+    unsigned long int sysTick;
+} stOPER; 
+
+extern stOPER Oper;
+
 void OPER_Initialise ( void );
 void OPER_Execute ( void );
 

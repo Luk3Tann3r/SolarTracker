@@ -36,9 +36,21 @@ extern "C" {
 #include "sensor.h"
 #endif
     
+#if !defined( SPA_H )
+#include "spa.h"
+#endif    
+    
 #if !defined( SUN_H )
 #include "sun.h"
 #endif
+    
+#if !defined( TELEMETRY_H )
+#include "telemetry.h"
+#endif 
+        
+#if !defined( TELMAN_H )
+#include "telman.h"
+#endif 
     
 #if !defined( TIMER_H )
 #include "timer.h"

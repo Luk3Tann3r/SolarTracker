@@ -22,10 +22,14 @@ int main(int argc, char** argv) {
     GPIO_Initialise( );
     ADC_Initialise( );
     PWM_Initialise ( );
-    UART_Initialise ( );
+    UART_Initialise ( UART_1 );
+    UART_Initialise ( UART_2 );
     SUN_Initialise ( );
+    SPA_Initialise( );
     GPS_Initialise ( );
-    TIMER_Initialise( );
+    TELMAN_Initialise ( );
+    OPER_Initialise ( );
+    TIMER_Initialise ( );
     
     while(1)
     {

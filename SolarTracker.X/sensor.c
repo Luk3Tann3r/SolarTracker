@@ -68,7 +68,7 @@ void SENSOR_Initialise ( void )
 
 void SENSOR_Execute ( void )
 {
-    sensor.fAngleAzimuth = ADC_Read (0);
+    sensor.fAngleAzimuth = ADC_Read (0); // relate physical angle to analog voltage
     sensor.fAngleZenith = ADC_Read (1);
     sensor.fCurrentAzimuth = ADC_Read (2);
     sensor.fCurrentZenith = ADC_Read (3);

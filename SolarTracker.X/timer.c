@@ -18,7 +18,7 @@
 #include "timer.h"
 
 /* --[ Local Definitions ]-- */
-#define SYS_TICK 10 //10 Hz System tick
+#define SYS_TICK 5 //5 Hz System tick
 
 /* --[ Default Settings ]-- */
 

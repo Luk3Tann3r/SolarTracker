@@ -16,13 +16,16 @@ typedef struct _stSUN
 {	           
     float    fAngleZenith; 
     float    fAngleAzimuth;
+    float    fAngleOfDeclination;
+    
+    long double modJulianDate;
 
 } stSUN;
 
 extern stSUN Sun;
 
 void SUN_Initialise ( void );
-void SUN_CalcAngles ( int iLatitude, int iLongitude, unsigned int uiEpochTime );
+void SUN_CalcAngles ( float fLatitude, float fLongitude );
 
 #ifdef	__cplusplus
 }

@@ -1,11 +1,11 @@
-build/default/production/gpio.o:  \
-gpio.c  \
+build/default/production/spa.o:  \
+spa.c  \
 system.h  \
 adc.h  \
 gpio.h  \
 gps.h  \
- oper.h  \
-pwm.h  \
+oper.h  \
+ pwm.h  \
 sensor.h  \
 spa.h  \
 sun.h  \

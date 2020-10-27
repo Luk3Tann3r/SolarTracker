@@ -18,18 +18,20 @@
 #include "oper.h"
 
 /* --[ Local Definitions ]-- */
-
+#define SUB_EXECUTE_RATE 10
+#define TELMAN_INDEX 0
+#define SUN_INDEX 1
 /* --[ Default Settings ]-- */
 
 /* --[ External Functions ]-- */
 
 /* --[ External Data ]-- */
-
+stOPER Oper; 
 /* --[ Public Data ]-- */
 
 /* --[ Private Data ]-- */
 static unsigned short usBlink = 0;
-char buffer[20];
+//char buffer[20];
 /* --[ Private Functions ]-- */
 
 /* --[ Function ] --
@@ -49,7 +51,7 @@ char buffer[20];
 
 void OPER_Initialise ( void )
 {
-
+    memset ( &Oper, 0, sizeof(Oper) );
 }
 
 /* --[ Function ] --
@@ -69,13 +71,50 @@ void OPER_Initialise ( void )
 
 void OPER_Execute ( void )
 {
+    Oper.sysTick++;
     // Gather sensor data
     SENSOR_Execute ( );
+    
+    //Implement function to control motors with PID
+    
     // Gather GPS data
     GPS_Execute ( );
-    // Calculate sun angles
-//    SUN_CalcAngles ( );
+    // Execute telemetry module
+    if((Oper.sysTick + TELMAN_INDEX )% SUB_EXECUTE_RATE == 0 )
+    {
+        TELMAN_Execute ( );
+    }
     
+    // Calculate sun angles
+    if((Oper.sysTick + SUN_INDEX )% SUB_EXECUTE_RATE == 0 )
+    {
+        //SUN_CalcAngles ( Gps.fLatitude, Gps.fLongitude );
+        
+        SPA_DATA.year          = 2003;
+        SPA_DATA.month         = 10;
+        SPA_DATA.day           = 17;
+        SPA_DATA.hour          = 12;
+        SPA_DATA.minute        = 30;
+        SPA_DATA.second        = 30;
+        SPA_DATA.timezone      = -7.0;
+        SPA_DATA.delta_ut1     = 0;
+        SPA_DATA.delta_t       = 67;
+        SPA_DATA.longitude     = -105.1786;
+        SPA_DATA.latitude      = 39.742476;
+        SPA_DATA.elevation     = 1830.14;
+        SPA_DATA.pressure      = 820;
+        SPA_DATA.temperature   = 11;
+        SPA_DATA.slope         = 30;
+        SPA_DATA.azm_rotation  = -10;
+        SPA_DATA.atmos_refract = 0.5667;
+
+        
+        
+        SPA_DATA.function = SPA_ZA;        // Switch to choose functions for desired output (from enumeration)
+        
+        spa_calculate(&SPA_DATA);
+    }
+
     //PID based on sensors and sun angles
     
     //Motor control to execute PID
@@ -83,8 +122,8 @@ void OPER_Execute ( void )
     //Transmit to GUI
     
     //Print out first pot value to serial
-    sprintf(buffer, "%f\r", sensor.fAngleAzimuth);
-    UART1_WriteString ( buffer );
+//    sprintf(buffer, "%f\r", sensor.fAngleAzimuth);
+//    UART1_WriteString ( buffer );
     
     //Use sensor outputs on remaining 3 pots to control PWM
     PWM_Set( 1, sensor.fAngleZenith);
