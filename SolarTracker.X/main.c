@@ -30,6 +30,7 @@ int main(int argc, char** argv) {
     TELMAN_Initialise ( );
     OPER_Initialise ( );
     TIMER_Initialise ( );
+    setupPID( ); //set up pid
     
     while(1)
     {

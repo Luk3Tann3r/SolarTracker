@@ -60,6 +60,10 @@ extern "C" {
 #include "uart.h"
 #endif
     
+#if !defined( PID_H )
+#include "pid.h"
+#endif    
+    
 #define sysclock 120000000UL
 #define FCY sysclock/4
 

@@ -16,6 +16,7 @@
 
 #include "system.h"
 #include "oper.h"
+#include "pid.h"
 
 /* --[ Local Definitions ]-- */
 #define SUB_EXECUTE_RATE 10
@@ -116,6 +117,18 @@ void OPER_Execute ( void )
     }
 
     //PID based on sensors and sun angles
+    /* ############# PID AND MOTOR CONTROL ############# */
+    
+    if( !getPIDstate()){ //Turn PID and its interrupts on
+        enablePID();
+
+    }else{
+        //PID is on and running 
+        //Add logic here if you want it to stop
+    }
+    
+    /* Set the setpoint for both motors */
+    setPidPoints(spa_data.azimuth,spa_data.zenith);
     
     //Motor control to execute PID
     
@@ -126,10 +139,11 @@ void OPER_Execute ( void )
 //    UART1_WriteString ( buffer );
     
     //Use sensor outputs on remaining 3 pots to control PWM
+    /*
     PWM_Set( 1, sensor.fAngleZenith);
     PWM_Set( 2, sensor.fCurrentAzimuth);
     PWM_Set( 3, sensor.fCurrentZenith);
-    
+    */
     
     //Toggle Pin 6 for fun
     if(usBlink == 0)
